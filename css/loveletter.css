@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  text-align: center;
+}
+
+#paperBall {
+  width: 300px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#paperBall:hover {
+  transform: scale(1.08);
+}
+
+#babi {
+  position: absolute;
+  left: -120px;
+  top: 20px;
+  width: 100px;
+  z-index: 1;
+}
+
+#speechBubble {
+  position: absolute;
+  left: -140px;
+  top: -30px;
+  background: #fff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#paperUnfolded {
+  display: none;
+  width: 700px;
+  max-width: 95vw;
+  z-index: 3;
+  margin-top: 20px;
+  animation: unfold 1s ease forwards;
+  transition: width 0.3s ease;
+}
+
+.buttonGroup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 999;
+}
+
+#backButton,
+#closeButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: 'Georgia', serif;
+  background-color: #f8cdda;
+  color: #1e142f;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #f8cdda70;
+  transition: all 0.3s ease;
+  display: none; /* Hide individually just in case */
+}
+
+#backButton:hover,
+#closeButton:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px #f8cdda;
+}
+
+
+
+}
+
+@keyframes unfold {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#afterGif {
+  display: none;
+  max-width: 80vw;
+  margin-top: 20px;
+  z-index: 3;
+}
+
+#nextButton {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: 'Georgia', serif;
+  background-color: #f8cdda;
+  color: #1e142f;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #f8cdda70;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#nextButton:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px #f8cdda;
+}
+#afterGif {
+  display: none;
+  max-width: 80vw;
+  margin-top: 20px;
+  z-index: 3;
+}
+
+#nextButton {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: 'Georgia', serif;
+  background-color: #f8cdda;
+  color: #1e142f;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #f8cdda70;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#nextButton:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px #f8cdda;
+}
+
+
