@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #101820;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', serif;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heart {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  animation: beat 1s infinite;
+  transition: transform 0.3s ease;
+}
+
+.message {
+  font-size: 1.4em;
+  font-family: 'Georgia', serif;
+  color: #f8cdda;
+  font-style: italic;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #f8cdda;
+  width: 0;
+  animation: typing 5s steps(40, end) forwards, blink 0.7s step-end infinite;
+  margin-top: 20px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #f8cdda; }
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.next-button {
+  display: none; /* hidden initially */
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #f8cdda;
+  color: #1e142f;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #f8cdda70;
+  transition: all 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #fff;
+  color: #1e142f;
+  box-shadow: 0 0 20px #f8cdda;
+}
+
